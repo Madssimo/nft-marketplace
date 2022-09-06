@@ -14,4 +14,9 @@ interface IERC721 {
         address indexed _approved,
         uint256 indexed _tokenId
     );
+
+    function balanceOf(address _owner) external view returns (uint256);
+    function ownerOf(uint256 _tokenId) external view returns (address);
+    function transferFrom(address _from, address _to, uint _tokenId) external; 
+
 }
